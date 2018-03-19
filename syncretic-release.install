@@ -3,12 +3,12 @@ post_install() {
         -e "s|Manjaro Linux|Syncretic Linux|g" \
         -e "s|https://www.manjaro.org/|http://syncreticlinux.org/|g" \
         -e "s|https://bugs.manjaro.org/|http://syncreticlinux.org/forums|g" \
-        -e '/ID=netrunner/a\BUILD_ID=18.01' \
+        -e '/ID=netrunner/a\BUILD_ID=18.04' \
         -i usr/lib/os-release
 }
 
 post_upgrade() {
-    sed -e "s|BUILD_ID=20|BUILD_ID=18.01|" \
+    sed -e "s|BUILD_ID=20|BUILD_ID=18.04|" \
         -i usr/lib/os-release
 }
 

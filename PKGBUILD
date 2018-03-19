@@ -2,13 +2,13 @@
 # Maintainer: Matt Kowal <matt@mkxt.net>
 
 pkgname=syncretic-release
-pkgver=18.01  #$(date +%Y.%m)
+pkgver=18.04  #$(date +%Y.%m)
 pkgrel=1
 pkgdesc="Adds the Syncretic lsb-release file"
 arch=('any')
 url="N/A"
 license=('GPL')
-groups=('syncretic-common')
+groups=('syncretic-core')
 depends=('bash')
 conflicts=('manjaro-release')
 install="syncretic-release.install"
