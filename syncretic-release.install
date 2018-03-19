@@ -1,0 +1,22 @@
+post_install() {
+    sed -e "s|ID=manjaro|ID=syncretic|" \
+        -e "s|Manjaro Linux|Syncretic Linux|g" \
+        -e "s|https://www.manjaro.org/|http://syncreticlinux.org/|g" \
+        -e "s|https://bugs.manjaro.org/|http://syncreticlinux.org/forums|g" \
+        -e '/ID=netrunner/a\BUILD_ID=18.01' \
+        -i usr/lib/os-release
+}
+
+post_upgrade() {
+    sed -e "s|BUILD_ID=20|BUILD_ID=18.01|" \
+        -i usr/lib/os-release
+}
+
+post_remove() {
+    sed -e "s|ID=syncretic|ID=manjaro|" \
+        -e "s|Syncretic Linux|Manjaro Linux|g" \
+        -e "s|http://syncreticlinux.org/|https://www.manjaro.org/|g" \
+        -e "s|http://syncreticlinux.org/forums|https://bugs.manjaro.org/|g" \
+        -e '/BUILD_ID=18.01/d' \
+        -i usr/lib/os-release
+}
