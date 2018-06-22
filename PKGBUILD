@@ -2,7 +2,7 @@
 # Maintainer: Matt Kowal <matt@mkxt.net>
 
 pkgname=syncretic-release
-pkgver=18.04  #$(date +%Y.%m)
+pkgver=18.08  #$(date +%Y.%m)
 pkgrel=1
 pkgdesc="Adds the Syncretic lsb-release file"
 arch=('any')
